@@ -1,37 +1,37 @@
-#ifndef SCTURTURS_H
-#define SCTURTURS_H
+#ifndef STRUCTURE_H
+#define STRUCTURE_H
 
 #include <stddef.h>
 
 
 typedef enum {
 	ENCRYPT_OK = 0,
-	ERR_ENCRYPT_NULL_POINTER,
-	ERR_ENCRYPT_INVALID_ARG,
+	ERR_ENCRYPT_NULL_STR = 1,
+	ERR_ENCRYPT_INVALID_ARG = 2,
 } encrypt_status;
 
-ecrypt_status caesar_encryption (
+encrypt_status caesar_encryption (
 	const char *input,
 	char *output,
 	size_t output_size,
 	int shift
 );
 
-ecrypt_status caesar_decryption (
+encrypt_status caesar_decryption (
 	const char *input,
 	char *output,
 	size_t output_size,
 	int shift
 );
 
-ecrypt_status vigener_encryption (
+encrypt_status vigener_encryption (
 	const char *input,
 	char *output,
 	size_t output_size,
 	const char *key
 );
 
-ecrypt_status vigener_decryption (
+encrypt_status vigener_decryption (
 	const char *input,
 	char *output,
 	size_t output_size,
@@ -39,4 +39,4 @@ ecrypt_status vigener_decryption (
 );
 
 
-#endif //SCTURTURS_H
+#endif //STRUCTURE_H

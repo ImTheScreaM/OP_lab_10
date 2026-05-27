@@ -1,4 +1,3 @@
-
 #ifndef SHIFT_H
 #define SHIFT_H
 
