@@ -6,8 +6,9 @@
 
 typedef enum {
 	ENCRYPT_OK = 0,
-	ERR_ENCRYPT_NULL_STR = 1,
-	ERR_ENCRYPT_INVALID_ARG = 2,
+	ERR_ENCRYPT_NULL_STR,
+	ERR_ENCRYPT_INVALID_ARG,
+	ERR_ENCRYPT_INVALID_KEY,
 } encrypt_status;
 
 encrypt_status caesar_encryption (
