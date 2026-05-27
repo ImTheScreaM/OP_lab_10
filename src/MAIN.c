@@ -66,11 +66,11 @@ int main() {
 
 
 	printf("----- Шифр Цезаря -----\n");
-	ret_res = caesar_encryption(entered_str, caesar_encrypt, MAX_STR_SIZE, shift);
+	ret_res = caesar_encryption(entered_str, caesar_encrypt, shift);
 	if (ret_res == ENCRYPT_OK) {
 		printf("Зашифрованная строка с помощью шифра Цезаря: %s\n",caesar_encrypt);
 
-		ret_res = caesar_decryption(caesar_encrypt, caesar_decrypt, MAX_STR_SIZE, shift);
+		ret_res = caesar_decryption(caesar_encrypt, caesar_decrypt, shift);
 
 		if (ret_res == ENCRYPT_OK) {
 			printf("Расшифровано: %s\n",caesar_decrypt);
@@ -85,11 +85,11 @@ int main() {
 	}
 
 	printf("----- Шифр Винжера -----\n");
-	ret_res = vigener_encryption(entered_str, vigener_encrypt, MAX_STR_SIZE, key);
+	ret_res = vigener_encryption(entered_str, vigener_encrypt, key);
 	if (ret_res == ENCRYPT_OK) {
 		printf("Зашифрованная строка с помощью шифра Вижера: %s\n",vigener_encrypt);
 
-		ret_res = vigener_decryption(vigener_encrypt, vigener_decrypt, MAX_STR_SIZE, key);
+		ret_res = vigener_decryption(vigener_encrypt, vigener_decrypt, key);
 
 		if (ret_res == ENCRYPT_OK) {
 			printf("Расшифровано: %s\n",vigener_decrypt);

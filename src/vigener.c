@@ -16,7 +16,6 @@ static int get_shift(char key_char)
 encrypt_status vigener_encryption (
 												const char *input,
 												char *output,
-												size_t output_size,
 												const char *key)
 {
 	uint8_t ret_res = ENCRYPT_OK;
@@ -33,9 +32,7 @@ encrypt_status vigener_encryption (
 			size_t key_pos = 0;
 			size_t key_len = strlen(key);
 
-			for (ind;
-				  input[ind] != '\0';
-				  ind++) {
+			for (;input[ind] != '\0';ind++) {
 				if (isalpha(input[ind])) {
 					int shift = get_shift(key[key_pos % key_len]);
 
@@ -68,7 +65,6 @@ encrypt_status vigener_encryption (
 encrypt_status vigener_decryption (
 												const char *input,
 												char *output,
-												size_t output_size,
 												const char *key)
 {
 	uint8_t ret_res = ENCRYPT_OK;
@@ -86,9 +82,7 @@ encrypt_status vigener_decryption (
 			size_t key_pos = 0;
 			size_t key_len = strlen(key);
 
-			for (ind;
-					input[ind] != '\0';
-					ind++) {
+			for(;input[ind] != '\0';ind++) {
 				if (isalpha(input[ind])) {
 					int shift = get_shift(key[key_pos % key_len]);
 

@@ -8,7 +8,6 @@
 encrypt_status caesar_encryption(
 	                    const char *input,
                       char *output,
-                      size_t output_size,
                       int shift)
 {
 	uint8_t ret_res = ENCRYPT_OK;
@@ -22,9 +21,7 @@ encrypt_status caesar_encryption(
 		case ENCRYPT_OK:
 			size_t ind = 0;
 
-			for (ind;
-				  input[ind] != '\0';
-				  ind++) {
+			for (; input[ind] != '\0'; ind++) {
 				output[ind] = (char)shift_encrypt_char(input[ind],shift);
 			}
 			output[ind] = '\0';
@@ -45,7 +42,6 @@ encrypt_status caesar_encryption(
 encrypt_status caesar_decryption(
                     const char *input,
 										char *output,
-										size_t output_size,
 										int shift)
 {
 	uint8_t ret_res = ENCRYPT_OK;
@@ -60,9 +56,7 @@ encrypt_status caesar_decryption(
 		case ENCRYPT_OK:
 			size_t ind = 0;
 
-			for (ind;
-					input[ind] != '\0';
-					ind++) {
+			for (;input[ind] != '\0';ind++) {
 				output[ind] = (char)shift_decrypt_char(input[ind],shift);
 					}
 			output[ind] = '\0';

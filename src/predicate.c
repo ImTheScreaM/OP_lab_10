@@ -14,9 +14,7 @@ bool is_valid_key(const char *key) {
 		ret_res = 0;
 	}
 
-	for (ind;
-		  key[ind] != '\0';
-		  ind++) {
+	for (;key[ind] != '\0';ind++) {
 		if (!isalpha(key[ind])) {
 			ret_res = 0;
 		}
