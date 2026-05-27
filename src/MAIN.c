@@ -33,8 +33,11 @@
 
 int main() {
 	char entered_str[MAX_STR_SIZE];
+
 	char caesar_encryption[MAX_STR_SIZE];
 	char caesar_decryption[MAX_STR_SIZE];
+	char vigener_encryption[MAX_STR_SIZE];
+	char vigener_decryption[MAX_STR_SIZE];
 
 
 	uint8_t ret_res = OK;
