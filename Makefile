@@ -15,6 +15,7 @@ LIB = build/libcipher.so
 .PHONY: build test test_py sanitize static docs clean app run
 
 app:
+	mkdir -p outputs
 	$(GCC) $(ALL_SRC) $(CFLAGS) -o $(OUT_FILE)/$(OUT_NAME)
 
 run:
@@ -36,4 +37,3 @@ docs:
 
 clean:
 	rm -rf build outputs/*.out
-
