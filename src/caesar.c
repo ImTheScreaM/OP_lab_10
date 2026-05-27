@@ -15,11 +15,7 @@ encrypt_status caesar_encryption(
 
 	ret_res = !input ?
 	          ERR_ENCRYPT_NULL_STR
-	          : ENCRYPT_OK;
-
-	ret_res = !shift ?
-	          ERR_ENCRYPT_INVALID_ARG
-	          : ENCRYPT_OK;
+						:  ENCRYPT_OK;
 
 
 	switch (ret_res) {
@@ -58,9 +54,6 @@ encrypt_status caesar_decryption(
 						ERR_ENCRYPT_NULL_STR
 						: ENCRYPT_OK;
 
-	ret_res = !shift ?
-						ERR_ENCRYPT_INVALID_ARG
-						: ENCRYPT_OK;
 
 
 	switch (ret_res) {
