@@ -1,0 +1,7 @@
+PROJECT_NAME           = "Cipher Library"
+
+PROJECT_BRIEF          = "Библиотека шифров"
+
+OUTPUT_DIRECTORY       = docs
+
+INPUT                  = include src
